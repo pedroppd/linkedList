@@ -55,22 +55,21 @@ public class LinkedList {
 
     public Node removeLast() {
         Node temp = head;
+        Node pre = head;
         if (length == 0) return null;
-        while (temp != null) {
-            if (temp.value == this.length) {
-                temp.next = null;
-                temp.value = 0;
-            }
 
-            if (temp.value == this.length - 1) {
-                temp.next = null;
-                this.tail.value = temp.value;
-                this.length--;
-            }
-
+        while (temp.next != null) {
+            pre = temp;
             temp = temp.next;
         }
-        return new Node(this.length);
+        tail = pre;
+        tail.next = null;
+        length--;
+        if (length == 0) {
+            head = null;
+            tail = null;
+        }
+        return temp;
     }
 
 }
