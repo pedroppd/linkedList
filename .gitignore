@@ -10,5 +10,6 @@
 *.ipr
 *.iws
 
+
 # Dependências e bibliotecas
 /lib/
