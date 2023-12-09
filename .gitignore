@@ -1,0 +1,14 @@
+# Arquivos compilados
+*.class
+
+# Arquivos de construção
+/target/
+
+# Arquivos de configuração
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Dependências e bibliotecas
+/lib/
