@@ -26,6 +26,7 @@ public class Main {
         myLinkedList3.append(5);
         myLinkedList3.append(6);
         System.out.println(myLinkedList3.removeFirst().value);
+        System.out.println(myLinkedList3.get(2));
         myLinkedList3.printList();
     }
 }
