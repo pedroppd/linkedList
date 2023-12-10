@@ -13,10 +13,19 @@ public class Main {
 
         // (0) Items - Returns null
         System.out.println(myLinkedList.removeLast());
-
+        System.out.println("####################### PREPREND ############################");
         LinkedList myLinkedList2 = new LinkedList(2);
         myLinkedList2.append(3);
         myLinkedList2.preprend(1);
         myLinkedList2.printList();
+
+        System.out.println("####################### REMOVE FIRST ############################");
+        LinkedList myLinkedList3 = new LinkedList(2);
+        myLinkedList3.append(3);
+        myLinkedList3.append(4);
+        myLinkedList3.append(5);
+        myLinkedList3.append(6);
+        System.out.println(myLinkedList3.removeFirst().value);
+        myLinkedList3.printList();
     }
 }
