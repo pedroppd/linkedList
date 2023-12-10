@@ -28,5 +28,14 @@ public class Main {
         System.out.println(myLinkedList3.removeFirst().value);
         System.out.println(myLinkedList3.get(2));
         myLinkedList3.printList();
+
+        System.out.println("####################### SET ############################");
+        LinkedList myLinkedList4 = new LinkedList(2);
+        myLinkedList4.append(3);
+        myLinkedList4.append(4);
+        myLinkedList4.append(5);
+        myLinkedList4.append(6);
+        System.out.println(myLinkedList4.set(3, 356));
+        myLinkedList4.printList();
     }
 }
