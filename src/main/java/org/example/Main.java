@@ -14,5 +14,9 @@ public class Main {
         // (0) Items - Returns null
         System.out.println(myLinkedList.removeLast());
 
+        LinkedList myLinkedList2 = new LinkedList(2);
+        myLinkedList2.append(3);
+        myLinkedList2.preprend(1);
+        myLinkedList2.printList();
     }
 }
