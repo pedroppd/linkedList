@@ -1,5 +1,7 @@
 package org.example;
 
+import static java.util.Objects.isNull;
+
 public class LinkedList {
 
     private Node head;
@@ -70,6 +72,18 @@ public class LinkedList {
             tail = null;
         }
         return temp;
+    }
+
+    public void preprend(int value) {
+        var newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        length++;
     }
 
 }
