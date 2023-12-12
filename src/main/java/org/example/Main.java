@@ -37,5 +37,15 @@ public class Main {
         myLinkedList4.append(6);
         System.out.println(myLinkedList4.set(3, 356));
         myLinkedList4.printList();
+
+
+        System.out.println("####################### INSERT ############################");
+        LinkedList myLinkedList5 = new LinkedList(2);
+        myLinkedList5.append(3);
+        myLinkedList5.append(4);
+        myLinkedList5.append(5);
+        myLinkedList5.append(6);
+        System.out.println(myLinkedList4.insert(2, 1000));
+        myLinkedList4.printList();
     }
 }
