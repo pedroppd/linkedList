@@ -135,14 +135,16 @@ public class LinkedList {
         return true;
     }
 
-    public boolean remove(int index) {
-        if (index < 0 || index > length) return false;
+    public Node remove(int index) {
+        if (index < 0 || index > length) return null;
 
-        Node node = get(index);
-        Node before = get(index - 1);
-        before.next = node.next;
+        if(index == 0) return removeFirst();
+        if(index == length - 1) return removeLast();
+        Node prev = get(index - 1);
+        Node temp = prev.next;
+        temp.next = null;
         length--;
-        return true;
+        return temp;
     }
 
 }
