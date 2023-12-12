@@ -47,5 +47,14 @@ public class Main {
         myLinkedList5.append(6);
         System.out.println(myLinkedList4.insert(2, 1000));
         myLinkedList4.printList();
+
+        System.out.println("####################### Remove ############################");
+        LinkedList myLinkedList6 = new LinkedList(2);
+        myLinkedList6.append(3);
+        myLinkedList6.append(4);
+        myLinkedList6.append(5);
+        myLinkedList6.append(6);
+        System.out.println(myLinkedList6.remove(2));
+        myLinkedList6.printList();
     }
 }

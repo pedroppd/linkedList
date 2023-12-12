@@ -102,7 +102,7 @@ public class LinkedList {
             return null;
 
         Node temp = head;
-        for (int i = 0; i <= index; i++)
+        for (int i = 0; i < index; i++)
             temp = temp.next;
 
         return temp;
@@ -132,6 +132,16 @@ public class LinkedList {
         node.next = temp.next;
         temp.next = node;
         length++;
+        return true;
+    }
+
+    public boolean remove(int index) {
+        if (index < 0 || index > length) return false;
+
+        Node node = get(index);
+        Node before = get(index - 1);
+        before.next = node.next;
+        length--;
         return true;
     }
 
