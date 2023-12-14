@@ -56,5 +56,15 @@ public class Main {
         myLinkedList6.append(6);
         System.out.println(myLinkedList6.remove(2));
         myLinkedList6.printList();
+
+        System.out.println("####################### reverse ############################");
+        LinkedList myLinkedList7 = new LinkedList(2);
+        myLinkedList7.append(3);
+        myLinkedList7.append(4);
+        myLinkedList7.append(5);
+        myLinkedList7.append(6);
+        myLinkedList7.printList();
+        myLinkedList7.reverse();
+        myLinkedList7.printList();
     }
 }
