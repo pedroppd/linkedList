@@ -16,7 +16,7 @@ public class Main {
         System.out.println("####################### PREPREND ############################");
         LinkedList myLinkedList2 = new LinkedList(2);
         myLinkedList2.append(3);
-        myLinkedList2.preprend(1);
+        myLinkedList2.prepend(1);
         myLinkedList2.printList();
 
         System.out.println("####################### REMOVE FIRST ############################");

@@ -74,7 +74,7 @@ public class LinkedList {
         return temp;
     }
 
-    public void preprend(int value) {
+    public void prepend(int value) {
         var newNode = new Node(value);
         if (length == 0) {
             head = newNode;
@@ -150,7 +150,7 @@ public class LinkedList {
         Node temp = head;
         head = tail;
         tail = temp;
-        Node after = temp.next;
+        Node after;
         Node before = null;
         for(int i = 0; i<length; i++) {
             after = temp.next;
