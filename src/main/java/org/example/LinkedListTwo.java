@@ -62,7 +62,7 @@ public class LinkedListTwo {
     public Node findMiddleNode() {
         Node slow = head;
         Node fast = head;
-        while (slow.next != null && fast.next != null) {
+        while (slow != null && slow.next != null && fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
