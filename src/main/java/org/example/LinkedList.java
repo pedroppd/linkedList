@@ -121,7 +121,7 @@ public class LinkedList {
         if (index < 0 || index > length) return false;
 
         if (index == 0) {
-            preprend(value);
+            prepend(value);
             return true;
         }
         if (index == length) {

@@ -66,5 +66,18 @@ public class Main {
         myLinkedList7.printList();
         myLinkedList7.reverse();
         myLinkedList7.printList();
+
+
+        LinkedListTwo mylist = new LinkedListTwo(1);
+        mylist.append(2);
+        mylist.append(3);
+        mylist.append(4);
+        mylist.append(5);
+        System.out.println("1 -> 2 -> 3 -> 4 -> 5");
+        System.out.println( "Middle Node: "+ mylist.findMiddleNode().value);
+        mylist.append(6);
+        System.out.println("===========================");
+        System.out.println("1 -> 2 -> 3 -> 4 -> 5 -> 6");
+        System.out.println( "Middle Node: "+ mylist.findMiddleNode().value);
     }
 }
