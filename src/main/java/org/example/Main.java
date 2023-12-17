@@ -79,5 +79,16 @@ public class Main {
         System.out.println("===========================");
         System.out.println("1 -> 2 -> 3 -> 4 -> 5 -> 6");
         System.out.println( "Middle Node: "+ mylist.findMiddleNode().value);
+
+        LinkedListTwo myLinkedListKth = new LinkedListTwo(1);
+        myLinkedListKth.append(2);
+        myLinkedListKth.append(3);
+        myLinkedListKth.append(4);
+        myLinkedListKth.append(5);
+
+        int k = 2;
+        int result = myLinkedListKth.findKthFromEnd(k).value;
+
+        System.out.println("findMiddleNode should be 4 and the output value is:" + result); // Output: 4
     }
 }

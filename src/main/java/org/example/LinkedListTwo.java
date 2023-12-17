@@ -60,9 +60,13 @@ public class LinkedListTwo {
     }
 
     public Node findMiddleNode() {
+        // 1,2,3,4,5,6,7
         Node slow = head;
         Node fast = head;
-        while (slow != null && slow.next != null && fast != null && fast.next != null) {
+
+        // fast -> 3 -> 5 -> 7 -> null
+        // slow -> 2 -> 3 -> 4 ->
+        while ((slow != null && slow.next != null) && (fast != null && fast.next != null)) {
             fast = fast.next.next;
             slow = slow.next;
         }
@@ -79,6 +83,21 @@ public class LinkedListTwo {
                 return true;
         }
         return false;
+    }
+
+    public Node findKthFromEnd(int k) {
+        Node slow = head;
+        Node fast = head;
+        for (int i = 0; i < k; i++) {
+            fast = fast.next;
+        }
+
+        while (fast != tail) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        return slow;
     }
 
 }
