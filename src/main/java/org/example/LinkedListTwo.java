@@ -86,13 +86,23 @@ public class LinkedListTwo {
     }
 
     public Node findKthFromEnd(int k) {
+        if (head == null || k <= 0) {
+            return null;
+        }
+
         Node slow = head;
         Node fast = head;
+
+        // Move fast pointer k nodes ahead
         for (int i = 0; i < k; i++) {
+            if (fast == null) {
+                return null; // If k is greater than the number of nodes
+            }
             fast = fast.next;
         }
 
-        while (fast != tail) {
+        // Move both pointers until fast reaches the end
+        while (fast != null) {
             slow = slow.next;
             fast = fast.next;
         }
