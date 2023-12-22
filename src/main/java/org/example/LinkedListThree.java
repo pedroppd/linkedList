@@ -5,15 +5,6 @@ public class LinkedListThree {
     private Node head;
     private int length;
 
-    class Node {
-        int value;
-        Node next;
-
-        Node(int value) {
-            this.value = value;
-        }
-    }
-
     public LinkedListThree(int value) {
         Node newNode = new Node(value);
         head = newNode;
@@ -70,7 +61,34 @@ public class LinkedListThree {
         length++;
     }
 
-    public void partitionList(int i) {
+    public void partitionList(int x) {
+        if (head == null) return;
+
+        Node dummyLess = new Node(0);// Dummy node for values less than x
+        Node lessPtr = dummyLess; // Pointer for values less than x
+
+        Node dummyGreaterEqual = new Node(0);  // Pointer for values greater than or equal to x
+        Node greaterEqualPtr = dummyGreaterEqual; // Dummy node for values greater than or equal to x
+        Node current = head;  // Start traversing from the head of the linked list
+
+        while (current != null) {
+            if (current.value < x) {
+                // Values less than x go in the lessPtr chain
+                lessPtr.next = current;
+                lessPtr = lessPtr.next;
+            } else {
+                // Values greater than or equal to x go in the greaterEqualPtr chain
+                greaterEqualPtr.next = current;
+                greaterEqualPtr = greaterEqualPtr.next;
+            }
+            current = current.next;
+        }
+        // Connect the two chains
+        greaterEqualPtr.next = null; // Terminate the greaterEqual chain
+        lessPtr.next = dummyGreaterEqual.next; // Connect the two chains
+
+        // Update the head to the rearranged list
+        head = dummyLess.next;
     }
 }
 
