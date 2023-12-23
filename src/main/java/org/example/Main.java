@@ -110,25 +110,19 @@ public class Main {
         System.out.println("LL after partitionList:");
         ll.printList(); // Output: 3 2 1 5 8 10
 
-        /*
-            EXPECTED OUTPUT:
-            ----------------
-            LL before partition_list:
-            3
-            5
-            8
-            10
-            2
-            1
-            LL after partition_list:
-            3
-            2
-            1
-            5
-            8
-            10
+        LinkedListFour myLinkedListFour = new LinkedListFour(1);
 
-        */
+        myLinkedListFour.append(1);
+        myLinkedListFour.append(2);
+        myLinkedListFour.append(2);
+        myLinkedListFour.append(3);
+        myLinkedListFour.append(3);
+        myLinkedListFour.append(3);
+        myLinkedListFour.append(4);
+
+        myLinkedListFour.removeDuplicates();
+
+        myLinkedList.printList();
 
     }
 }
