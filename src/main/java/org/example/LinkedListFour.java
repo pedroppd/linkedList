@@ -63,21 +63,34 @@ public class LinkedListFour {
     }
 
     public void removeDuplicates() {
+        //11223334
         if (length == 0) return;
         HashSet<Integer> set = new HashSet<>();
         Node current = head;
         Node prev = null;
-
         while (current != null) {
-            int data = current.value;
-            if (set.contains(data)) {
+            int value = current.value;
+            if (set.contains(value)) {
                 prev.next = current.next;
             } else {
-                set.add(data);
+                set.add(value);
                 prev = current;
             }
             current = current.next;
         }
     }
 
+    public int binaryToDecimal() {
+        if (getLength() == 0) return 0;
+        var current = head;
+        var result = 0.0;
+        var potency = getLength() - 1;
+        while (current != null) {
+            int value = current.value;
+            result += value * Math.pow(2, potency);
+            current = current.next;
+            potency--;
+        }
+        return (int) result;
+    }
 }

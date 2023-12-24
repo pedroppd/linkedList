@@ -109,9 +109,8 @@ public class Main {
         // Print the list after partitioning
         System.out.println("LL after partitionList:");
         ll.printList(); // Output: 3 2 1 5 8 10
-
+        System.out.println("############### removeDuplicates ######################");
         LinkedListFour myLinkedListFour = new LinkedListFour(1);
-
         myLinkedListFour.append(1);
         myLinkedListFour.append(2);
         myLinkedListFour.append(2);
@@ -122,7 +121,51 @@ public class Main {
 
         myLinkedListFour.removeDuplicates();
 
-        myLinkedList.printList();
+        myLinkedListFour.printList();
+
+        System.out.println("################################ binaryToDecimal #################################");
+        // ---------------
+        // Convert 1011 to 11
+        // ---------------
+        LinkedListFour list1 = new LinkedListFour(1);
+        list1.append(1);
+        list1.append(1);
+        list1.append(1);
+        System.out.println("Convert 1111 to 50:");
+        System.out.println("Input: 1 -> 1 -> 1 -> 1");
+        System.out.println("Output: " + list1.binaryToDecimal());
+        System.out.println("---------------");
+
+        // ---------------
+        // Convert 1100 to 12
+        // ---------------
+        LinkedListFour list2 = new LinkedListFour(1);
+        list2.append(1);
+        list2.append(0);
+        list2.append(0);
+        System.out.println("Convert 1100 to 12:");
+        System.out.println("Input: 1 -> 1 -> 0 -> 0");
+        System.out.println("Output: " + list2.binaryToDecimal());
+        System.out.println("---------------");
+
+        // ---------------
+        // Convert 1 to 1
+        // ---------------
+        LinkedListFour list3 = new LinkedListFour(1);
+        System.out.println("Convert 1 to 1:");
+        System.out.println("Input: 1");
+        System.out.println("Output: " + list3.binaryToDecimal());
+        System.out.println("---------------");
+
+        // ---------------
+        // Convert empty list to 0
+        // ---------------
+        LinkedListFour list4 = new LinkedListFour(0);
+        list4.makeEmpty();
+        System.out.println("Convert empty list to 0:");
+        System.out.println("Input: empty");
+        System.out.println("Output: " + list4.binaryToDecimal());
+        System.out.println("---------------");
 
     }
 }
