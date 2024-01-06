@@ -93,4 +93,8 @@ public class LinkedListFour {
         }
         return (int) result;
     }
+
+    public void reverseBetween(int m, int n) {
+        // Your implementation here
+    }
 }
