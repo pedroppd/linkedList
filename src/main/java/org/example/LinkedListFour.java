@@ -95,6 +95,10 @@ public class LinkedListFour {
     }
 
     public void reverseBetween(int m, int n) {
-        // Your implementation here
+        var temp = getHead();
+        while (temp != null) {
+            System.out.println("Value:" + temp.value);
+            temp = temp.next;
+        }
     }
 }
